@@ -67,8 +67,8 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 16px;
+  
 
   // language selector for mobile devices
   .lang-selector {
@@ -470,7 +470,7 @@ html, body {
   aside {
     padding-top: 1em;
     padding-bottom: 1em;
-    text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
+    text-shadow: 0 0px 0 #333333;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
@@ -478,7 +478,7 @@ html, body {
 
     &.warning {
       background-color: $aside-warning-bg;
-      text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
+      text-shadow: 0 0px 0 #333333;
     }
 
     &.success {
@@ -624,4 +624,14 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+// Custom CSS
+
+.lang-selector a {
+  margin: 5px;
+  &.active {
+    background-color: $selected-lang-blue;
+    border-radius: 3px;
+  }
 }

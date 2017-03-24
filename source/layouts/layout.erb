@@ -27,6 +27,7 @@ under the License.
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
+    <%= stylesheet_link_tag :custom, media: :custom %>
     <% if current_page.data.search %>
       <%= javascript_include_tag  "all" %>
     <% else %>
@@ -104,9 +105,13 @@ under the License.
           <div class="lang-selector">
             <% language_tabs.each do |lang| %>
               <% if lang.is_a? Hash %>
+              <div>
                 <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
+              </div>
               <% else %>
+              <div>
                 <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+              </div>
               <% end %>
             <% end %>
           </div>
